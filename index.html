@@ -1,168 +1,36 @@
 <!doctype html>
-<html lang="es">
+<html lang="es" data-root="">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Juan Manuel Borrero González · Escritor</title>
 <meta name="description" content="Biografía del escritor Juan Manuel Borrero González (El Cerro del Andévalo, 1947): novelista, ensayista, articulista y catedrático de Matemáticas.">
+<meta name="theme-color" content="#f6f1e7">
+<script>document.documentElement.classList.add('js')</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Inter:wght@500;600&display=swap" rel="stylesheet">
-<style>
-:root{
-  --paper:#f6f1e7; --paper-2:#efe7d6; --ink:#1f1a14; --ink-2:#5a5046; --rule:#d8ccb4;
-  --accent:#7a2a1f; --accent-soft:#f0dcd3; --night:#16130f;
-  --serif-d:"Cormorant Garamond",Georgia,serif; --serif:"Source Serif 4",Georgia,serif; --sans:Inter,system-ui,sans-serif;
-  --w:680px;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:72px}
-body{margin:0;background:var(--paper);color:var(--ink);font:400 1.125rem/1.75 var(--serif);-webkit-font-smoothing:antialiased}
-img{max-width:100%;display:block}
-a{color:var(--accent);text-underline-offset:3px}
-
-/* nav */
-.nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
-.nav-in{max-width:1180px;margin:auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
-.brand{font:600 1.35rem/1 var(--serif-d);letter-spacing:.02em;color:var(--ink);text-decoration:none}
-.nav ul{list-style:none;display:flex;gap:26px;margin:0;padding:0}
-.nav ul a{font:500 .78rem/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2);text-decoration:none}
-.nav ul a:hover{color:var(--accent)}
-.menu-btn{display:none;background:none;border:0;font:600 .78rem var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--ink)}
-
-/* hero */
-.hero{max-width:1180px;margin:auto;padding:72px 24px 88px;display:grid;grid-template-columns:1.05fr 1fr;gap:64px;align-items:center}
-.eyebrow{font:600 .75rem/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin:0 0 22px}
-.hero h1{font:500 clamp(2.8rem,6vw,5.2rem)/.98 var(--serif-d);margin:0 0 28px;letter-spacing:-.01em}
-.hero h1 em{font-style:italic;color:var(--accent)}
-.hero .lede{font-size:1.25rem;color:var(--ink-2);max-width:30ch;margin:0 0 36px}
-.facts{display:grid;grid-template-columns:repeat(3,auto);gap:28px;justify-content:start;border-top:1px solid var(--rule);padding-top:24px}
-.facts b{display:block;font:600 2rem/1 var(--serif-d);color:var(--ink)}
-.facts span{font:500 .72rem/1.3 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
-.hero figure{margin:0;position:relative}
-.hero figure img{width:100%;aspect-ratio:4/4.4;object-fit:cover;filter:sepia(.12) contrast(1.02)}
-.hero figure::before{content:"";position:absolute;inset:18px -18px -18px 18px;border:1px solid var(--accent);z-index:-1}
-
-/* chapters */
-.chapter{padding:96px 24px;border-top:1px solid var(--rule)}
-.chapter.alt{background:var(--paper-2)}
-.ch-head{max-width:var(--w);margin:0 auto 44px}
-.ch-num{font:600 .75rem/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
-.ch-head h2{font:500 clamp(2.1rem,4vw,3.1rem)/1.05 var(--serif-d);margin:14px 0 0}
-.prose{max-width:var(--w);margin:auto}
-.prose p{margin:0 0 1.35em;text-wrap:pretty}
-.prose .drop::first-letter{float:left;font:600 4.6rem/.8 var(--serif-d);color:var(--accent);margin:.08em .1em 0 0}
-.prose em.t{font-style:italic}
-
-/* footnote refs */
-sup.fn{font:600 .68rem/0 var(--sans);vertical-align:super;margin-left:1px}
-sup.fn a{text-decoration:none;padding:1px 4px;border-radius:3px;background:var(--accent-soft);color:var(--accent)}
-sup.fn a:hover{background:var(--accent);color:#fff}
-.pop{position:absolute;z-index:40;max-width:min(420px,calc(100vw - 32px));background:var(--night);color:#efe7d6;font:400 .86rem/1.55 var(--serif);padding:16px 18px;border-radius:6px;box-shadow:0 18px 40px -12px rgba(0,0,0,.45)}
-.pop a{color:#f3b9a6;word-break:break-all}
-.pop .n{font:600 .7rem var(--sans);letter-spacing:.14em;color:#c9bba2;display:block;margin-bottom:6px}
-
-/* figures inside text */
-.split{max-width:1080px;margin:56px auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-.split.rev figure{order:2}
-.fig{margin:0}
-.fig img{box-shadow:0 22px 40px -22px rgba(31,26,20,.55);background:#fff}
-.fig figcaption{font:500 .78rem/1.4 var(--sans);color:var(--ink-2);margin-top:12px;letter-spacing:.02em}
-.fig figcaption b{color:var(--ink)}
-.covers{max-width:1080px;margin:56px auto;display:grid;grid-template-columns:repeat(3,1fr);gap:36px;align-items:end}
-.covers .fig img{width:100%;aspect-ratio:2/3;object-fit:cover}
-.covers .fig.clip img{object-fit:contain;background:#fbf8f1;padding:8px}
-.pull{font:500 italic clamp(1.6rem,2.6vw,2.1rem)/1.3 var(--serif-d);color:var(--accent);border-left:2px solid var(--accent);padding-left:24px;margin:0}
-
-/* prize band */
-.band{background:var(--night);color:#efe7d6;padding:88px 24px}
-.band .ch-head h2{color:#fff}
-.band .prose{color:#d9cfbd}
-.prizes{max-width:1080px;margin:48px auto 0;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #3d352b}
-.prize{padding:28px 22px 4px;border-right:1px solid #3d352b}
-.prize:last-child{border-right:0}
-.prize .y{font:600 .74rem var(--sans);letter-spacing:.16em;color:#d98c74}
-.prize h3{font:500 1.6rem/1.15 var(--serif-d);color:#fff;margin:10px 0 8px}
-.prize p{font-size:.9rem;line-height:1.55;color:#b9ad98;margin:0}
-.prize .tag{display:inline-block;margin-top:12px;font:600 .66rem var(--sans);letter-spacing:.14em;text-transform:uppercase;padding:4px 8px;border:1px solid #5d5245;color:#d9cfbd}
-.prize .tag.win{border-color:#d98c74;color:#d98c74}
-
-/* timeline */
-.tl{max-width:var(--w);margin:48px auto 0;list-style:none;padding:0;border-left:1px solid var(--rule)}
-.tl li{position:relative;padding:0 0 28px 28px}
-.tl li::before{content:"";position:absolute;left:-5px;top:.55em;width:9px;height:9px;border-radius:50%;background:var(--accent)}
-.tl .y{font:600 .76rem var(--sans);letter-spacing:.12em;color:var(--accent);display:block}
-.tl p{margin:2px 0 0;font-size:1rem;line-height:1.6}
-
-/* docs */
-.docs{max-width:1080px;margin:56px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
-.doc{background:#fff;border:1px solid var(--rule);padding:14px;cursor:zoom-in;text-align:left;font:inherit;color:inherit}
-.doc img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top}
-.doc b{display:block;font:600 1.15rem/1.25 var(--serif-d);margin:14px 2px 4px}
-.doc span{display:block;font:500 .74rem/1.4 var(--sans);color:var(--ink-2);margin:0 2px}
-
-/* notes */
-.notes{max-width:880px;margin:auto}
-.notes ol{padding-left:1.4em;margin:0;columns:1}
-.notes li{font-size:.92rem;line-height:1.6;color:var(--ink-2);padding:10px 0 10px 6px;border-bottom:1px solid var(--rule)}
-.notes li::marker{font:600 .8rem var(--sans);color:var(--accent)}
-.notes li:target{background:var(--accent-soft)}
-.notes a{word-break:break-all}
-
-footer{background:var(--night);color:#9d917e;padding:56px 24px;text-align:center;font:500 .8rem/1.6 var(--sans);letter-spacing:.04em}
-footer .brand{color:#efe7d6;display:block;margin-bottom:10px;font-size:1.6rem}
-
-/* lightbox */
-dialog{border:0;padding:0;background:transparent;max-width:92vw;max-height:92vh}
-dialog::backdrop{background:rgba(15,12,9,.88)}
-dialog img{max-height:88vh;width:auto;margin:auto}
-dialog button{position:fixed;top:18px;right:22px;background:none;border:0;color:#fff;font:500 2rem/1 var(--sans);cursor:pointer}
-
-.reveal{opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .8s ease}
-.reveal.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
-
-@media (max-width:900px){
-  .hero{grid-template-columns:1fr;gap:48px;padding-top:40px}
-  .hero figure{order:-1;max-width:520px}
-  .split{grid-template-columns:1fr;gap:28px}
-  .split.rev figure{order:0}
-  .split .fig{max-width:380px}
-  .covers,.docs{grid-template-columns:1fr 1fr;gap:20px}
-  .prizes{grid-template-columns:1fr 1fr}
-  .prize:nth-child(2){border-right:0}
-  .nav ul{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:var(--paper);border-bottom:1px solid var(--rule)}
-  .nav ul.open{display:flex}
-  .nav ul a{display:block;padding:16px 24px}
-  .menu-btn{display:block}
-}
-@media (max-width:560px){
-  body{font-size:1.06rem}
-  .chapter{padding:72px 16px}.hero{padding-left:16px;padding-right:16px}
-  .hero figure{margin-right:10px}.hero figure::before{inset:10px -10px -10px 10px}
-  .facts{grid-template-columns:repeat(3,1fr);gap:14px}.facts b{font-size:1.6rem}
-  .prizes{grid-template-columns:1fr}.prize{border-right:0;border-bottom:1px solid #3d352b;padding-bottom:22px}
-  .docs{grid-template-columns:1fr}
-}
-</style>
+<link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
 
-<nav class="nav">
+<a class="skip" href="#main">Saltar al contenido</a>
+<nav class="nav" aria-label="Principal">
   <div class="nav-in">
-    <a class="brand" href="#inicio">J. M. Borrero</a>
-    <button class="menu-btn" aria-expanded="false" aria-controls="menu">Menú</button>
+    <a class="brand" href="./">J. M. Borrero</a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="menu"><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path class="l1" d="M3 6h14"/><path class="l2" d="M3 10h14"/><path class="l3" d="M3 14h14"/></svg><span>Menú</span></button>
     <ul id="menu">
-      <li><a href="#biografia">Biografía</a></li>
-      <li><a href="#premios">Premios</a></li>
-      <li><a href="#obra">Obra</a></li>
-      <li><a href="#docencia">Docencia</a></li>
-      <li><a href="#fuentes">Fuentes</a></li>
+      <li><a href="biografia/">Biografía</a></li>
+      <li><a href="premios/">Premios</a></li>
+      <li><a href="obra/">Obra</a></li>
+      <li><a href="docencia/">Docencia</a></li>
+      <li><a href="fuentes/">Fuentes</a></li>
     </ul>
   </div>
 </nav>
 
-<header class="hero" id="inicio">
+<main id="main">
+<header class="hero">
   <div>
     <p class="eyebrow">Escritor · Catedrático de Matemáticas</p>
     <h1>Juan Manuel<br><em>Borrero González</em></h1>
@@ -173,204 +41,53 @@ dialog button{position:fixed;top:18px;right:22px;background:none;border:0;color:
       <div><b>+20</b><span>Obras publicadas</span></div>
     </div>
   </div>
-  <figure><img src="img/foto1.jpg" alt="Juan Manuel Borrero leyendo un libro frente a su biblioteca"></figure>
+  <figure><img src="img/foto1-600.webp" srcset="img/foto1-600.webp 600w, img/foto1-1200.webp 1200w" sizes="(max-width:900px) 92vw, 540px" width="1200" height="1103" fetchpriority="high" alt="Juan Manuel Borrero leyendo un libro frente a su biblioteca"></figure>
 </header>
 
-<!-- I -->
-<section class="chapter" id="biografia">
-  <div class="ch-head reveal"><span class="ch-num">I · Ciencias y letras</span><h2>Un físico que escribe</h2></div>
-  <div class="prose reveal">
-    <p class="drop">Juan Manuel Borrero González es un escritor español nacido en El Cerro del Andévalo (Huelva) en 1947. Aunque su formación académica está vinculada a las ciencias, pues es licenciado en Física y Catedrático de Matemáticas<sup class="fn"><a href="#n1">1</a></sup>, ha desarrollado una destacada trayectoria literaria que lo sitúa entre los autores andaluces más prolíficos. A lo largo de varias décadas ha cultivado diversos géneros, desde el relato y la novela hasta el ensayo y el artículo periodístico, combinando en muchas ocasiones elementos filosóficos, históricos y simbólicos.</p>
-  </div>
-  <div class="split reveal">
-    <figure class="fig"><img src="img/foto2.jpg" alt="Portada de Relatos heterodoxos" loading="lazy"><figcaption><b>Relatos heterodoxos</b> · Cuadernos de Al-Ándalus, 1988</figcaption></figure>
-    <div class="prose">
-      <p>Su primera obra publicada —de fuertes raíces borgianas— fue <em class="t">Relatos heterodoxos</em><sup class="fn"><a href="#n2">2</a></sup>, un conjunto de narraciones que ya mostraban algunas de sus características y que, posteriormente, definirían su proyecto literario: el gusto por lo insólito, la reflexión intelectual y la exploración de los límites entre realidad y ficción.</p>
-      <p>Esta publicación supuso el inicio de un sello de autor que pronto recibiría reconocimiento nacional.</p>
-    </div>
-  </div>
-</section>
-
-<!-- II -->
 <section class="chapter alt">
-  <div class="ch-head reveal"><span class="ch-num">II · 1989</span><h2>El año de Juan Manuel Borrero</h2></div>
+  <div class="ch-head reveal"><span class="ch-num">El autor</span><h2>Un físico que escribe</h2></div>
   <div class="prose reveal">
-    <p>El año 1989 resultó especialmente importante para el autor<sup class="fn"><a href="#n3">3</a></sup>. En primer lugar obtuvo el II Premio Nacional de Relatos Ciudad de Algeciras con <em class="t">La del alba sería</em><sup class="fn"><a href="#n4">4</a></sup>, una obra que consolidó su prestigio como narrador. Ese mismo año consiguió el IV Premio Andalucía de Novela<sup class="fn"><a href="#n5">5</a></sup> con <em class="t">La luna blanca de Chesed</em><sup class="fn"><a href="#n6">6</a></sup>, considerada una de sus obras más relevantes.</p>
+    <p class="drop">Juan Manuel Borrero González es un escritor español nacido en El Cerro del Andévalo (Huelva) en 1947. Licenciado en Física y Catedrático de Matemáticas, ha desarrollado una destacada trayectoria literaria que lo sitúa entre los autores andaluces más prolíficos, cultivando el relato, la novela, el ensayo y el artículo periodístico.</p>
   </div>
-  <div class="covers reveal">
-    <figure class="fig"><img src="img/foto5.jpg" alt="Portada de La del alba sería" loading="lazy"><figcaption><b>La del alba sería</b> · II Premio Nacional de Relatos Ciudad de Algeciras</figcaption></figure>
-    <figure class="fig"><img src="img/foto3.jpg" alt="Portada de La luna blanca de Chesed, Colección Austral" loading="lazy"><figcaption><b>La luna blanca de Chesed</b> · IV Premio Andalucía de Novela · Espasa Calpe</figcaption></figure>
-    <figure class="fig clip"><img src="img/foto4.jpg" alt="Portada de ABC de Sevilla del 27 de febrero de 1989 con la noticia del premio" loading="lazy"><figcaption><b>ABC de Sevilla</b> · 27 de febrero de 1989</figcaption></figure>
-  </div>
-  <div class="prose reveal">
-    <p>Esta novela destaca por la combinación de elementos históricos, filosóficos y esotéricos. Enmarcada en la baja Edad Media, aparecen en ella referencias a la cábala, al pensamiento pitagórico y a diversas corrientes místicas, integradas en una trama donde el misterio y la intriga desempeñan un papel fundamental.</p>
-    <blockquote class="pull">La crítica destacó la originalidad con la que el autor relaciona el orden matemático y la magia.</blockquote>
-    <p style="margin-top:1.35em">La crítica literaria<sup class="fn"><a href="#n7">7</a></sup> destacó la originalidad con la que el autor relaciona el orden matemático y la magia, dos conceptos aparentemente opuestos que en la novela aparecen estrechamente vinculados<sup class="fn"><a href="#n8">8</a></sup>.</p>
+  <div class="sections reveal">
+    <a class="card" href="biografia/"><img class="thumb" src="img/foto3-600.webp" srcset="img/foto3-600.webp 600w, img/foto3-1200.webp 1200w" sizes="120px" width="824" height="1400" alt="" loading="lazy"><span class="ch-num">I – II · Ciencias y letras</span><h3>Biografía</h3><p>De los <em>Relatos heterodoxos</em> a 1989, el año del Premio Andalucía de Novela con <em>La luna blanca de Chesed</em>.</p><span class="go">Leer →</span></a>
+    <a class="card" href="premios/"><img class="thumb" src="img/foto4-600.webp" srcset="img/foto4-600.webp 600w, img/foto4-1200.webp 1200w" sizes="120px" width="989" height="1400" alt="" loading="lazy"><span class="ch-num">III · Reconocimientos</span><h3>Premios</h3><p>Ganador del Premio Andalucía de Novela y finalista del Planeta, el Azorín y el Ateneo de Sevilla.</p><span class="go">Leer →</span></a>
+    <a class="card" href="obra/"><img class="thumb" src="img/foto6-600.webp" srcset="img/foto6-600.webp 600w, img/foto6-1200.webp 1200w" sizes="120px" width="885" height="1400" alt="" loading="lazy"><span class="ch-num">IV – VI · Narrativa y ensayo</span><h3>Obra</h3><p>Novelas, relatos, ensayo, columnas de prensa y la bibliografía completa.</p><span class="go">Leer →</span></a>
+    <a class="card" href="docencia/"><img class="thumb" src="img/doc-uned-600.webp" srcset="img/doc-uned-600.webp 600w, img/doc-uned-1200.webp 1200w" sizes="120px" width="990" height="1400" alt="" loading="lazy"><span class="ch-num">VII · Enseñanza</span><h3>Docencia</h3><p>Institutos, UNED, IAAP y la alcaldía de El Cerro del Andévalo, con documentación acreditativa.</p><span class="go">Leer →</span></a>
+    <a class="card" href="fuentes/"><span class="ch-num">Notas</span><h3>Fuentes</h3><p>Ediciones, ISBN, hemeroteca y estudios universitarios sobre su obra.</p><span class="go">Leer →</span></a>
   </div>
 </section>
+</main>
 
-<!-- III -->
-<section class="band" id="premios">
-  <div class="ch-head reveal"><span class="ch-num" style="color:#d98c74">III · Reconocimientos</span><h2>Entre los grandes certámenes</h2></div>
-  <div class="prose reveal">
-    <p>Durante las décadas siguientes continuó desarrollando nuevos proyectos narrativos. Varias de sus obras fueron finalistas en importantes certámenes literarios, en la mayoría de las ocasiones bajo sus seudónimos más comunes: <em>Juan de la Trinidad</em> y <em>Xavier Suquet</em>. Esta circunstancia demuestra tanto su calidad literaria como su capacidad para competir en algunos de los concursos más prestigiosos del ámbito hispánico.</p>
+<footer class="site-footer">
+  <div class="f-grid">
+    <div class="f-col f-about">
+      <a class="f-brand" href="biografia/">Juan Manuel Borrero González</a>
+      <p class="f-role">Escritor · Catedrático de Matemáticas</p>
+      <p>Nacido en El Cerro del Andévalo (Huelva) en 1947, licenciado en Física y catedrático de Matemáticas. Novelista, ensayista y articulista, Premio Andalucía de Novela en 1989 y finalista del Premio Planeta.</p>
+      <a class="more" href="biografia/">Leer la biografía →</a>
+    </div>
+    <nav class="f-col" aria-label="Secciones">
+      <h2>Secciones</h2>
+      <ul><li><a href="./" aria-current="page">Inicio</a></li><li><a href="biografia/">Biografía</a></li><li><a href="premios/">Premios</a></li><li><a href="obra/">Obra</a></li><li><a href="docencia/">Docencia</a></li><li><a href="fuentes/">Fuentes</a></li></ul>
+    </nav>
+    <div class="f-col f-books">
+      <h2>Obra destacada</h2>
+      <ul><li><a href="obra/#bibliografia">La luna blanca de Chesed<small>Novela · Premio Andalucía 1989</small></a></li><li><a href="obra/#bibliografia">Su nombre era nadie<small>Relatos · Premio Canaleta 2001</small></a></li><li><a href="obra/#bibliografia">Aproximación al hombre mágico<small>Ensayo · 2019</small></a></li><li><a href="obra/#bibliografia">Albur de espadas<small>Narrativa · 2020</small></a></li></ul>
+    </div>
+    <nav class="f-col" aria-label="Información legal">
+      <h2>Legal</h2>
+      <ul><li><a href="aviso-legal/">Aviso legal</a></li><li><a href="privacidad/">Política de privacidad</a></li><li><a href="cookies/">Política de cookies</a></li></ul>
+    </nav>
   </div>
-  <div class="prizes reveal">
-    <div class="prize"><span class="y">1989</span><h3>Premio Andalucía de Novela</h3><p>IV edición, con <em>La luna blanca de Chesed</em>.<sup class="fn"><a href="#n5">5</a></sup></p><span class="tag win">Ganador</span></div>
-    <div class="prize"><span class="y">1990 · 1993</span><h3>Premio Planeta</h3><p>Finalista en dos convocatorias.<sup class="fn"><a href="#n9">9</a></sup></p><span class="tag">Finalista</span></div>
-    <div class="prize"><span class="y">1992</span><h3>Premio Azorín</h3><p>Finalista.<sup class="fn"><a href="#n10">10</a></sup></p><span class="tag">Finalista</span></div>
-    <div class="prize"><span class="y">1991 · 1994</span><h3>Ateneo de Sevilla</h3><p>Finalista en dos convocatorias.<sup class="fn"><a href="#n11">11</a></sup></p><span class="tag">Finalista</span></div>
-  </div>
-</section>
-
-<!-- IV -->
-<section class="chapter" id="obra">
-  <div class="ch-head reveal"><span class="ch-num">IV · Narrativa</span><h2>Identidad, mito y misterio</h2></div>
-  <div class="prose reveal">
-    <p>En 2001 publicó <em class="t">Su nombre era nadie</em>, obra galardonada con el III Premio Internacional de Relatos «Canaleta»<sup class="fn"><a href="#n12">12</a></sup>. El título evoca la figura de Ulises en la mitología clásica y refleja los intereses narrativos del autor: la identidad humana y la construcción simbólica de los personajes, pululando, en esta ocasión, en las labores de la minería onubense de finales del XVIII, plena de conflictos sociales. Su publicación contribuyó a reforzar su prestigio dentro del género narrativo breve.</p>
-    <p>Tras algunos años de menor actividad editorial, el escritor regresó con fuerza en la década de 2010. En 2015 apareció <em class="t">En las riberas del Aqueronte</em><sup class="fn"><a href="#n13">13</a></sup>, novela cuyo título remite al río mitológico asociado al mundo de los muertos en la tradición griega. La obra profundiza en cuestiones existenciales, religiosas y metafísicas, integradas en una trama policiaca para desentrañar las actividades criminales de una secta demoníaca, tema este recurrente en la producción de Borrero.</p>
-    <p>Posteriormente (2018) publicó <em class="t">Los manuscritos de la lechuza</em><sup class="fn"><a href="#n14">14</a></sup>, obra inspirada parcialmente en un relato premiado años antes<sup class="fn"><a href="#n15">15</a></sup> y que combina elementos de misterio, simbolismo esotérico y reflexión cultural.</p>
-    <p>Lo especial de su obra queda patente en el interés demostrado —no solo a nivel nacional— por la investigación literaria en el ámbito universitario<sup class="fn"><a href="#n16">16</a></sup>.</p>
-  </div>
-</section>
-
-<!-- V -->
-<section class="chapter alt">
-  <div class="ch-head reveal"><span class="ch-num">V · Ensayo y prensa</span><h2>El pensamiento y la columna</h2></div>
-  <div class="prose reveal">
-    <p>Además de la narrativa, Juan Manuel Borrero ha cultivado el ensayo. Una muestra de ello es <em class="t">Aproximación al hombre mágico</em> (2019)<sup class="fn"><a href="#n17">17</a></sup>, donde analiza aspectos relacionados con el pensamiento simbólico, las creencias y la dimensión espiritual del individuo. Este interés por los aspectos ocultos o trascendentes de la experiencia humana aparece también en buena parte de sus novelas, lo que dota a su obra de una notable coherencia temática.</p>
-    <p>Paralelamente a las actividades puramente literarias, pero concomitantes con ellas, participó en presentaciones y congresos literarios<sup class="fn"><a href="#n18">18</a></sup>, pliegos de creación<sup class="fn"><a href="#n19">19</a></sup> y pregonó alguna importante Feria del Libro<sup class="fn"><a href="#n20">20</a></sup>.</p>
-    <p>Otra faceta destacada de su producción es la actividad periodística. Durante años colaboró con distintos medios de comunicación y publicó artículos de opinión (Suplemento Cultural <em>La Isla</em> de <em>Europa Sur</em>; <em>El Mundo</em>, edición para Huelva). Una selección de estos textos fue recopilada en <em class="t">Letra capitular</em><sup class="fn"><a href="#n21">21</a></sup>, obra que permite conocer una dimensión más personal y ensayística del autor. En su columna semanal <em>El rincón del fraile</em> (2005/06) se abordaban temas culturales, políticos, sociales y literarios desde una perspectiva crítica y reflexiva.</p>
-  </div>
-</section>
-
-<!-- VI -->
-<section class="chapter">
-  <div class="ch-head reveal"><span class="ch-num">VI · Obra reciente</span><h2>Las últimas publicaciones</h2></div>
-  <div class="split reveal">
-    <figure class="fig"><img src="img/foto6.jpg" alt="Portada de Albur de espadas, Editorial Onuba" loading="lazy"><figcaption><b>Albur de espadas</b> · Editorial Onuba, 2020</figcaption></figure>
-    <div class="prose">
-      <p>Entre sus últimas publicaciones destacan <em class="t">Imposturas</em><sup class="fn"><a href="#n22">22</a></sup>, <em class="t">Albur de espadas</em><sup class="fn"><a href="#n23">23</a></sup> y <em class="t">De profetas y herejes</em><sup class="fn"><a href="#n24">24</a></sup>, obras que continúan explorando los grandes temas presentes en toda su trayectoria: la búsqueda de la verdad, la identidad, el misterio, la historia y la condición humana.</p>
+  <div class="f-bottom">
+    <div class="f-bottom-in">
+      <span>© 2026 Juan Manuel Borrero González · Todos los derechos reservados</span>
+      <span>Textos e imágenes propiedad del autor · <a href="aviso-legal/">Aviso legal</a></span>
     </div>
   </div>
-  <div class="split rev reveal">
-    <figure class="fig"><img src="img/foto7.jpg" alt="Portada de Problemas resueltos para el acceso a la Universidad: Cálculo" loading="lazy"><figcaption><b>Problemas resueltos para el acceso a la Universidad</b> · Cálculo</figcaption></figure>
-    <div class="prose">
-      <p>Complementariamente, también ha publicado diversos manuales<sup class="fn"><a href="#n25">25</a></sup> y libros didácticos relacionados con las matemáticas<sup class="fn"><a href="#n26">26</a></sup>, lo que evidencia la singular combinación entre ciencias y letras que caracteriza su acción intelectual.</p>
-    </div>
-  </div>
-  <div class="prose reveal">
-    <p>Resumiendo, la obra de este autor destaca por su variedad de géneros, la riqueza de sus referencias culturales y filosóficas y su capacidad para combinar pensamiento racional e imaginación. Sus novelas y relatos muestran un especial interés por los aspectos simbólicos y trascendentes de la existencia humana, mientras que sus ensayos y artículos reflejan una profunda inquietud intelectual. Gracias a ello, se ha consolidado como una voz singular dentro de la literatura andaluza contemporánea<sup class="fn"><a href="#n27">27</a></sup>.</p>
-  </div>
-</section>
-
-<!-- VII -->
-<section class="chapter alt" id="docencia">
-  <div class="ch-head reveal"><span class="ch-num">VII · Enseñanza y servicio público</span><h2>Una vida en las aulas</h2></div>
-  <div class="prose reveal">
-    <p>Cerrando la información sobre la figura de Borrero, cabe señalar su vinculación con el mundo de las enseñanzas medias<sup class="fn"><a href="#n28">28</a></sup>, universitarias<sup class="fn"><a href="#n29">29</a></sup> y la Administración Pública<sup class="fn"><a href="#n30">30</a></sup>. Como colofón informativo, su leve paso por el mundo de la política durante el cuatrienio 2007/11, donde ejerció, con mayoría absoluta, como alcalde de su localidad natal.</p>
-  </div>
-  <ol class="tl reveal">
-    <li><span class="y">1971 – 1976</span><p>Jefe de Estudios del Instituto de Bachillerato Mixto 2 de Algeciras (hoy «El Kursaal»).</p></li>
-    <li><span class="y">1974 – 1985</span><p>Profesor tutor en el centro de la UNED de Algeciras desde su fundación: Álgebra I y II, Análisis I y II y Curso de Acceso para mayores de 25 años.</p></li>
-    <li><span class="y">1977 – 1980</span><p>Director del Instituto de Bachillerato «José Cadalso» de San Roque.</p></li>
-    <li><span class="y">1984</span><p>Catedrático de Matemáticas tras concurso-oposición (BOE 166, 12 de julio de 1984).</p></li>
-    <li><span class="y">1990 – 1998</span><p>Director del Instituto de Bachillerato a Distancia de Sevilla.</p></li>
-    <li><span class="y">1997 – 1999</span><p>Coordinador y profesor de Matemáticas del curso de acceso a la Universidad para funcionarios del IAAP.</p></li>
-    <li><span class="y">1998 – 1999</span><p>Director del Instituto Provincial de Formación de Adultos de Sevilla y coordinador del área de Matemáticas para la educación secundaria de adultos.</p></li>
-    <li><span class="y">2007 – 2011</span><p>Alcalde de El Cerro del Andévalo, con mayoría absoluta.</p></li>
-  </ol>
-
-  <div class="ch-head reveal" style="margin-top:72px;margin-bottom:0"><span class="ch-num">Acreditaciones</span><h2 style="font-size:2rem">Documentación</h2></div>
-  <div class="docs reveal">
-    <button class="doc" data-full="img/doc-uned.jpg"><img src="img/doc-uned.jpg" alt="Nombramiento de profesor tutor de la UNED" loading="lazy"><b>Nombramiento Profesor Tutor</b><span>UNED · Centro Asociado de Algeciras · curso 1976-77</span></button>
-    <button class="doc" data-full="img/doc-catedratico.jpg"><img src="img/doc-catedratico.jpg" alt="Título de funcionario de carrera del cuerpo de Catedráticos" loading="lazy"><b>Título de Catedrático</b><span>Cuerpo de Catedráticos de Enseñanza Secundaria · 2008</span></button>
-    <button class="doc" data-full="img/foto8.jpg"><img src="img/foto8.jpg" alt="Acreditación de profesor colaborador del IAAP" loading="lazy"><b>Profesor colaborador</b><span>Instituto Andaluz de Administración Pública · 1998</span></button>
-  </div>
-</section>
-
-<!-- NOTAS -->
-<section class="chapter" id="fuentes">
-  <div class="ch-head"><span class="ch-num">Fuentes</span><h2>Notas y referencias</h2></div>
-  <div class="notes">
-    <ol>
-      <li id="n1">Título de licenciatura expedido por la Universidad de Sevilla, inscrito en el folio 22, nº 90 de 13 de mayo de 1971. Tras proceso de concurso-oposición, catedrático por Resolución de la Dirección General de Personal y Servicios de 5 de julio de 1984 (BOE 166 de 12 de julio de 1984).</li>
-      <li id="n2">Editorial Cuadernos de Al-Ándalus, 1988. ISBN: 84-86209-19-6. Reedición (2019) por Independently Published, ISBN 9781799290889. Referencias de prensa: Diario de Cádiz (2/8/1988); Sur de Málaga (25/10/88); Diario Área del Campo de Gibraltar (25/10/88); Diario de Cádiz (25/10/88). Recortes conservados y digitalizados por el autor. <a href="https://escritores.org/libros/index.php/item/relatos-heterodoxos" target="_blank" rel="noopener">escritores.org/…/relatos-heterodoxos</a></li>
-      <li id="n3">Téllez, J. J. «El año de Juan Manuel Borrero y otros eventos». Revista <em>Almoraima</em>, 1989. <a href="https://dialnet.unirioja.es/servlet/articulo?codigo=2446943" target="_blank" rel="noopener">dialnet.unirioja.es/servlet/articulo?codigo=2446943</a></li>
-      <li id="n4">Ediciones del Centro Andaluz, 1989. ISBN: 978-84-86209-23-0. Reedición (2019) por Independently Published, ISBN 9781796632071. Referencias de prensa: Diario de Cádiz (27/12/1988 y 21/04/89); Sur de Málaga (24/12/88); Diario Área del Campo de Gibraltar (24/12/88); Diario Europa Sur (24/12/88, 20/04/89 y 21/04/89). <a href="https://escritores.org/libros/index.php/item/la-del-alba-seria" target="_blank" rel="noopener">escritores.org/…/la-del-alba-seria</a></li>
-      <li id="n5">Hemeroteca: <a href="http://hemeroteca.sevilla.abc.es/nav/Navigate.exe/hemeroteca/sevilla/abc.sevilla/1989/02/27/013.html" target="_blank" rel="noopener">ABC Sevilla 27/02/1989 p. 13</a> · <a href="http://hemeroteca.abcdesevilla.es/nav/Navigate.exe/hemeroteca/sevilla/abc.sevilla/1989/02/27/044.html" target="_blank" rel="noopener">ABC Sevilla 27/02/1989 p. 44</a> · <a href="http://hemeroteca.abcdesevilla.es/nav/Navigate.exe/hemeroteca/sevilla/abc.sevilla/1989/02/28/091.html" target="_blank" rel="noopener">ABC Sevilla 28/02/1989 p. 91</a> · <a href="http://elpais.com/diario/1989/02/27/cultura/604537211_850215.html" target="_blank" rel="noopener">El País 27/02/1989</a> · <a href="http://hemeroteca.abc.es/nav/Navigate.exe/hemeroteca/madrid/abc/1989/09/02/054.html" target="_blank" rel="noopener">ABC Madrid 02/09/1989 p. 54</a></li>
-      <li id="n6">Editorial Espasa Calpe. Colección Nueva Austral nº 91. ISBN: 84-239-1891-2. <a href="https://escritores.org/libros/index.php/item/la-luna-blanca-de-chesed" target="_blank" rel="noopener">escritores.org/…/la-luna-blanca-de-chesed</a></li>
-      <li id="n7"><a href="http://hemeroteca.abcdesevilla.es/nav/Navigate.exe/hemeroteca/sevilla/abc.sevilla/1989/12/30/101.html" target="_blank" rel="noopener">ABC Sevilla 30/12/1989 p. 101</a> · <a href="http://hemeroteca.abcdesevilla.es/nav/Navigate.exe/hemeroteca/sevilla/abc.sevilla/1990/03/17/054.html" target="_blank" rel="noopener">ABC Sevilla 17/03/1990 p. 54</a></li>
-      <li id="n8">Faílde, Domingo F. «Juan Manuel Borrero, cifra y magia del universo». Suplemento cultural de SUR (Málaga), núm. 228, 1989. «Azul», Suplemento cultural del Periódico de Guadalete (Jerez). Reseñas digitalizadas por el autor.</li>
-      <li id="n9">Referencias de prensa: Europa Sur (13/10/90); Europa Sur (16/10/90), portada y p. 4; ABC de Sevilla (12/10/93); Correo de Andalucía (12/10/93).</li>
-      <li id="n10">Referencias de prensa: Información de Alicante y La Verdad de Murcia (24/11/92).</li>
-      <li id="n11">Referencias de prensa: ABC de Sevilla y Correo de Andalucía (9/05/91); ABC de Sevilla (14/06/94).</li>
-      <li id="n12">Editorial Essan (ISBN: 84-930908-3-2). Referencias de prensa: Diario Huelva Información (17/11/2001 y 19/11/2001). <a href="https://www.escritores.org/libros/index.php/item/iii-premio-nacional-relatos-canaleta-su-nombre-era-nadie" target="_blank" rel="noopener">escritores.org/…/su-nombre-era-nadie</a></li>
-      <li id="n13">Editorial Círculo Rojo (ISBN: 978-84-9076-808-2). <a href="https://www.youtube.com/watch?v=TAvungXM_ng" target="_blank" rel="noopener">Vídeo en YouTube</a> · <a href="https://www.escritores.org/libros/index.php/item/en-las-riberas-del-aqueronte" target="_blank" rel="noopener">escritores.org/…/en-las-riberas-del-aqueronte</a></li>
-      <li id="n14">Apeyron Ediciones. ISBN: 978-84-17182-55-7. <a href="https://escritores.org/libros/index.php/item/los-manuscritos-de-la-lechuza" target="_blank" rel="noopener">escritores.org/…/los-manuscritos-de-la-lechuza</a></li>
-      <li id="n15">«Tríptico», obra ganadora del I Certamen Literario «Distrito Macarena», convocado en una única ocasión. Las certificaciones oficiales obran en poder del autor.</li>
-      <li id="n16">Sani, Elisabetta (2001). <em>La narrativa di Juan Manuel Borrero González</em> [Tesi di laurea]. Facoltà di Lettere e Filosofia, Letteratura Spagnola Moderna e Contemporanea. Università degli Studi di Firenze. Relatrice: Prof.ssa Edi Bastianelli.</li>
-      <li id="n17">Editorial Círculo Rojo, con prólogo del catedrático Miguel Florián. ISBN: 978-84-1317-352-8. <a href="https://www.youtube.com/watch?v=pPWNVsGws4o" target="_blank" rel="noopener">Book trailer</a> · <a href="https://escritores.org/libros/index.php/item/aproximacion-al-hombre-magico" target="_blank" rel="noopener">escritores.org/…/aproximacion-al-hombre-magico</a> · Revista literaria «El Tendedero» de Daniel Lebrato: <a href="https://daniellebrato.com/2020/10/30/valle-inclan-de-bolsillo/" target="_blank" rel="noopener">daniellebrato.com/…/valle-inclan-de-bolsillo</a></li>
-      <li id="n18">Presentación del libro de J. J. Téllez <em>Amor negro</em> (Europa Sur, 13/11/90 y 18/11/90). Junto a Mercedes Escolano, presentación de <em>El ocaso del girasol</em> de Paloma Fernández Gomá (Europa Sur y Área, 24/04/91). Junto a José Francisco Martínez López, ex rector de la Universidad de Huelva, presentación de <em>La musealización del patrimonio</em> de J. M. González Parrilla, del que fue prologuista (El Mundo, ed. Huelva, 23/05/2010). Presentación de <em>Cenar tormentas</em> de Diego Maestre, del que fue prologuista. Congreso de escritores campogibraltareños: Diario de Cádiz (3/11/88 y 6/11/88), Sur de Málaga (6/11/88), Diario Área (6/11/88).</li>
-      <li id="n19">Separata del número 0 de <em>Almoraima. Revista de Estudios Campogibraltareños</em> (diciembre 1988). <a href="https://institutoecg.es/almoraima/index.php/revista/article/view/1638" target="_blank" rel="noopener">institutoecg.es/almoraima/…/1638</a></li>
-      <li id="n20">Referencias de prensa: Europa Sur (30/03/89); ABC de Sevilla (3/9/89), sección cultura, p. 75; Europa Sur (4/05/89) p. 8; Europa Sur (5/05/89); Europa Sur (6/05/89); Área (7/05/89) pp. 2 y 4.</li>
-      <li id="n21">2019. Independently Published. ISBN: 9781091760936. <a href="https://escritores.org/libros/index.php/item/letra-capitular-art-de-prensa" target="_blank" rel="noopener">escritores.org/…/letra-capitular</a></li>
-      <li id="n22">2019. Independently Published. ISBN: 9781086832846. <a href="https://escritores.org/libros/index.php/item/imposturas" target="_blank" rel="noopener">escritores.org/…/imposturas</a></li>
-      <li id="n23">2020. Editorial Onuba. ISBN: 978-84-121334-6-2. <a href="https://escritores.org/libros/index.php/item/albur-de-espadas" target="_blank" rel="noopener">escritores.org/…/albur-de-espadas</a> · Crítica en «El Tendedero» por Daniel Lebrato: <a href="https://daniellebrato.com/2020/10/29/literatura-gran-best-seller/" target="_blank" rel="noopener">daniellebrato.com/…/literatura-gran-best-seller</a></li>
-      <li id="n24">2021. Independently Published. ISBN 9798702023427. Incluye el relato «Euphorbo el heresiarca», finalista en el I Certamen de Relatos «Agustín Sánchez Rodríguez». <a href="https://escritores.org/libros/index.php/item/de-profetas-y-herejes-relatos" target="_blank" rel="noopener">escritores.org/…/de-profetas-y-herejes</a> · Crítica en «El Tendedero»: <a href="https://daniellebrato.com/2021/03/22/juan-manuel-borrero-teoria-y-practica-del-subrayado/" target="_blank" rel="noopener">daniellebrato.com/…/teoria-y-practica-del-subrayado</a></li>
-      <li id="n25">Unidades didácticas para la Enseñanza de Adultos (Independently Published): Introducción al Álgebra (ISBN 9798631840577); Introducción a las Funciones (ISBN 9798639129735); Introducción a la Trigonometría (ISBN 9798641195681); Progresiones. Aplicaciones (ISBN 97986638298418); Geometría básica (ISBN 9798633921113).</li>
-      <li id="n26">Problemas resueltos para el acceso a la Universidad (Independently Published): Álgebra Lineal (ISBN 9798646765094); Cálculo (ISBN 9798653197529); Geometría (ISBN 9798650038368).</li>
-      <li id="n27">Juan de Dios Ruiz Copete, <em>Narradores andaluces de la posguerra</em>, ISBN 978-84-472-0650-6. Antología de autores onubenses <em>Lo que cayó del Conquero</em>: <a href="http://nuestronombre.es/cacua/catalogo/narrativa/lo-que-cayo-del-conquero" target="_blank" rel="noopener">nuestronombre.es/…/lo-que-cayo-del-conquero</a>. Proyecto de literatura independiente onubense. ABC literario (30/12/90), pp. IV y V. Tomo III de <em>Historia de Algeciras</em>, cap. VII (Literatura), p. 239. Obras catalogadas en la BNE y en la Red Pública de Bibliotecas de Andalucía.</li>
-      <li id="n28">Cursos 71/72 a 75/76: Jefe de Estudios del Instituto de Bachillerato Mixto 2 de Algeciras (hoy «El Kursaal»). Cursos 77/78 a 79/80: Director del IB «José Cadalso» de San Roque. Cursos 90/91 a 97/98: Director del Instituto de Bachillerato a Distancia de Sevilla. Curso 98/99: Director del Instituto Provincial de Formación de Adultos de Sevilla. Por nombramiento de 24/11/98 de la Dirección General de FP y Solidaridad, coordinador del área de Matemáticas del proyecto de materiales curriculares para la educación secundaria de adultos.</li>
-      <li id="n29">Desde su fundación (curso 74/75) hasta el curso 84/85, profesor tutor en el centro de la UNED de Algeciras: Álgebra I y II, Análisis I y II y, algún curso, el Curso de Acceso a la Universidad para mayores de 25 años.</li>
-      <li id="n30">Cursos 97/98 y 98/99: coordinador y profesor de Matemáticas del curso para funcionarios de Acceso a la Universidad para mayores de 25 años, organizado por el Instituto Andaluz de Administración Pública (IAAP).</li>
-    </ol>
-  </div>
-</section>
-
-<footer>
-  <span class="brand">Juan Manuel Borrero González</span>
-  Escritor · El Cerro del Andévalo, 1947<br>© 2026 · Todos los derechos reservados
 </footer>
 
-<dialog id="lb"><button aria-label="Cerrar">×</button><img alt=""></dialog>
-
-<script>
-// menú móvil
-const mb=document.querySelector('.menu-btn'),menu=document.getElementById('menu');
-mb.onclick=()=>{const o=menu.classList.toggle('open');mb.setAttribute('aria-expanded',o)};
-menu.querySelectorAll('a').forEach(a=>a.onclick=()=>menu.classList.remove('open'));
-
-// notas emergentes
-let pop;
-function closePop(){pop&&pop.remove();pop=null}
-document.querySelectorAll('sup.fn a').forEach(a=>{
-  a.addEventListener('click',e=>{
-    e.preventDefault();e.stopPropagation();
-    const id=a.getAttribute('href').slice(1),note=document.getElementById(id);
-    if(pop&&pop.dataset.id===id){closePop();return}
-    closePop();
-    pop=document.createElement('div');pop.className='pop';pop.dataset.id=id;
-    pop.innerHTML='<span class="n">NOTA '+id.slice(1)+'</span>'+note.innerHTML+' <a href="#'+id+'" style="display:block;margin-top:8px;word-break:normal">Ver en Fuentes →</a>';
-    document.body.appendChild(pop);
-    const r=a.getBoundingClientRect(),w=pop.offsetWidth;
-    let x=r.left+window.scrollX-w/2;x=Math.max(16,Math.min(x,document.documentElement.clientWidth-w-16));
-    pop.style.left=x+'px';pop.style.top=(r.bottom+window.scrollY+10)+'px';
-    pop.addEventListener('click',ev=>ev.stopPropagation());
-    pop.querySelector('a[href^="#n"]').onclick=closePop;
-  });
-});
-document.addEventListener('click',closePop);
-document.addEventListener('keydown',e=>e.key==='Escape'&&closePop());
-
-// lightbox documentos
-const lb=document.getElementById('lb');
-document.querySelectorAll('.doc').forEach(d=>d.onclick=()=>{lb.querySelector('img').src=d.dataset.full;lb.querySelector('img').alt=d.querySelector('img').alt;lb.showModal()});
-lb.onclick=()=>lb.close();
-
-// aparición suave
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
-document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-</script>
+<script src="assets/site.js" defer></script>
 </body>
 </html>
