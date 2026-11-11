@@ -156,9 +156,13 @@
 }
 </script>
 <script>document.documentElement.classList.add('js')</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Inter:wght@500;600&display=swap" rel="stylesheet">
+<script>
+/* Consentimiento: las tipografías de Google solo se cargan si se aceptan */
+(function(){var c;try{c=JSON.parse(localStorage.getItem('jmb-consent')||'null')}catch(e){}
+if(c&&c.v===1&&c.ext&&Date.now()-c.t<31536e6){var l=document.createElement('link');l.rel='stylesheet';l.setAttribute('data-gfonts','');
+l.href='https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Inter:wght@500;600&display=swap';
+document.head.appendChild(l)}})();
+</script>
 <link rel="stylesheet" href="../assets/styles.css">
 </head>
 <body>
@@ -181,21 +185,31 @@
 <main id="main">
 <header class="page-head" data-num="§">
   <p class="crumbs"><a href="../">Inicio</a> <span aria-hidden="true">/</span> Política de cookies</p>
+  <p class="ph-name">Juan Manuel Borrero González</p>
   <h1>Política de cookies</h1>
-  <p class="lede">Información sobre el uso de cookies en este sitio web.</p>
+  <p class="lede">Qué cookies y servicios de terceros usa este sitio y cómo gestionar tu consentimiento.</p>
 </header>
 
 <section class="chapter legal" style="border-top:0;padding-top:24px">
 <div class="prose">
 <h2>1. ¿Qué son las cookies?</h2>
-<p>Las cookies son pequeños archivos que algunas webs guardan en el navegador para recordar información sobre la visita.</p>
-<h2>2. Cookies que utiliza este sitio</h2>
-<p>Este sitio web <b>no utiliza cookies propias</b> ni cookies de analítica, publicidad o redes sociales. Por eso no se muestra ningún aviso de consentimiento.</p>
-<p>Las tipografías se cargan desde Google Fonts. Este servicio no instala cookies, pero sí recibe la dirección IP del visitante, como se explica en la <a href="../privacidad/">política de privacidad</a>.</p>
-<h2>3. Cómo gestionar las cookies</h2>
-<p>Desde la configuración del navegador puede bloquear o eliminar cookies en cualquier momento: <a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener">Chrome</a>, <a href="https://support.mozilla.org/es/kb/Borrar%20cookies" target="_blank" rel="noopener">Firefox</a>, <a href="https://support.apple.com/es-es/guide/safari/sfri11471/mac" target="_blank" rel="noopener">Safari</a> y <a href="https://support.microsoft.com/es-es/microsoft-edge" target="_blank" rel="noopener">Edge</a>.</p>
-<h2>4. Cambios en esta política</h2>
-<p>Si en el futuro se incorporan herramientas que usen cookies, esta política se actualizará y se solicitará el consentimiento correspondiente.</p>
+<p>Las cookies y tecnologías similares (como el almacenamiento local del navegador) son pequeños archivos o datos que una web guarda en tu dispositivo para recordar información sobre tu visita.</p>
+<h2>2. Qué utiliza este sitio</h2>
+<p>Este sitio <b>no utiliza cookies de analítica, publicidad ni redes sociales</b>. Solo usa lo siguiente:</p>
+<ul>
+<li><b>Preferencia de consentimiento</b> (técnica, necesaria). Nombre: <code>jmb-consent</code>. Tipo: almacenamiento local del navegador. Titular: este sitio. Finalidad: recordar tu elección sobre esta política. Duración: 12 meses; después volveremos a preguntarte.</li>
+<li><b>Tipografías de Google Fonts</b> (servicio de terceros, opcional). Proveedor: Google Ireland Ltd. No instala cookies, pero al cargarse tu navegador se conecta a servidores de Google, que reciben tu dirección IP. <b>Solo se cargan si las aceptas</b>; si las rechazas, la web se muestra con tipografías de tu propio dispositivo.</li>
+</ul>
+<h2>3. Base legal</h2>
+<p>El almacenamiento técnico de tu elección está exento de consentimiento por ser necesario (art. 22.2 de la LSSI-CE). La carga de Google Fonts se basa en tu consentimiento (art. 6.1.a del RGPD), que puedes dar o retirar en cualquier momento.</p>
+<h2>4. Cómo cambiar tu elección</h2>
+<p>Puedes cambiar o retirar tu consentimiento cuando quieras desde el enlace «Configurar cookies» del pie de página o con este botón:</p>
+<p><button type="button" class="cc-open cc-inline">Configurar cookies</button></p>
+<p>También puedes borrar los datos del sitio desde la configuración de tu navegador: <a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener">Chrome</a>, <a href="https://support.mozilla.org/es/kb/Borrar%20cookies" target="_blank" rel="noopener">Firefox</a>, <a href="https://support.apple.com/es-es/guide/safari/sfri11471/mac" target="_blank" rel="noopener">Safari</a> y <a href="https://support.microsoft.com/es-es/microsoft-edge" target="_blank" rel="noopener">Edge</a>.</p>
+<h2>5. Transferencias internacionales</h2>
+<p>Google puede tratar datos fuera del Espacio Económico Europeo. Google LLC está adherida al Marco de Privacidad de Datos UE-EE. UU. Más información en la <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">política de privacidad de Google</a>.</p>
+<h2>6. Cambios en esta política</h2>
+<p>Si se incorporan nuevas herramientas que usen cookies, esta política se actualizará y se volverá a solicitar tu consentimiento.</p>
 <p class="updated">Última actualización: noviembre de 2026</p>
 </div>
 </section>
@@ -219,7 +233,7 @@
     </div>
     <nav class="f-col" aria-label="Información legal">
       <h2>Legal</h2>
-      <ul><li><a href="../aviso-legal/">Aviso legal</a></li><li><a href="../privacidad/">Política de privacidad</a></li><li><a href="../cookies/" aria-current="page">Política de cookies</a></li></ul>
+      <ul><li><a href="../aviso-legal/">Aviso legal</a></li><li><a href="../privacidad/">Política de privacidad</a></li><li><a href="../cookies/" aria-current="page">Política de cookies</a></li><li><button type="button" class="cc-open">Configurar cookies</button></li></ul>
     </nav>
   </div>
   <div class="f-bottom">
